@@ -1,6 +1,6 @@
 name: json_editor_2
 description: A json editor on flutter,The project is forked from https://github.com/youngchan1988/json_editor_2, and modified to support passing and modifying custom TextFiledController..
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/HoseaDev/json_editor_2
 issue_tracker: https://github.com/HoseaDev/json_editor_2
 

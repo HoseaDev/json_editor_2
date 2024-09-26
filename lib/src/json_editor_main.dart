@@ -17,7 +17,6 @@ import 'rich_text_field/rich_text_editing_controller.dart';
 import 'util/string_util.dart';
 
 class JsonEditor extends StatefulWidget {
-
   JsonEditor._(
       {Key? key,
       this.jsonString,
@@ -25,7 +24,8 @@ class JsonEditor extends StatefulWidget {
       this.enabled = true,
       this.openDebug = false,
       this.onValueChanged,
-      required this.controller})
+      required this.controller,
+        required this.focusNode})
       : assert(jsonObj == null || jsonObj is Map || jsonObj is List),
         super(key: key) {
     initialLogger(openDebug: openDebug);
@@ -37,6 +37,7 @@ class JsonEditor extends StatefulWidget {
           bool enabled = true,
           bool openDebug = false,
           TextEditingController? controller,
+            FocusNode? focusNode,
           ValueChanged<JsonElement>? onValueChanged}) =>
       JsonEditor._(
         key: key,
@@ -45,6 +46,7 @@ class JsonEditor extends StatefulWidget {
         openDebug: openDebug,
         onValueChanged: onValueChanged,
         controller: controller ?? RichTextEditingController(),
+        focusNode: focusNode ?? FocusNode(),
       );
 
   factory JsonEditor.object(
@@ -52,7 +54,8 @@ class JsonEditor extends StatefulWidget {
           Object? object,
           bool enabled = true,
           bool openDebug = false,
-            TextEditingController? controller,
+          TextEditingController? controller,
+            FocusNode? focusNode,
           ValueChanged<JsonElement>? onValueChanged}) =>
       JsonEditor._(
         key: key,
@@ -60,8 +63,8 @@ class JsonEditor extends StatefulWidget {
         enabled: enabled,
         openDebug: openDebug,
         onValueChanged: onValueChanged,
-
         controller: controller ?? RichTextEditingController(),
+        focusNode: focusNode ?? FocusNode(),
       );
 
   factory JsonEditor.element(
@@ -69,7 +72,8 @@ class JsonEditor extends StatefulWidget {
           JsonElement? element,
           bool enabled = true,
           bool openDebug = false,
-            TextEditingController? controller,
+          TextEditingController? controller,
+            FocusNode? focusNode,
           ValueChanged<JsonElement>? onValueChanged}) =>
       JsonEditor._(
         key: key,
@@ -78,6 +82,7 @@ class JsonEditor extends StatefulWidget {
         openDebug: openDebug,
         onValueChanged: onValueChanged,
         controller: controller ?? RichTextEditingController(),
+        focusNode: focusNode ?? FocusNode(),
       );
 
   final String? jsonString;
@@ -85,6 +90,7 @@ class JsonEditor extends StatefulWidget {
   final bool enabled;
   final bool openDebug;
   final TextEditingController controller;
+  final FocusNode focusNode;
 
   /// Output the decoded json object.
   final ValueChanged<JsonElement>? onValueChanged;
@@ -125,9 +131,9 @@ class JsonEditor extends StatefulWidget {
 
 class _JsonEditorState extends State<JsonEditor> {
   late RichTextEditingController _editController;
+  late FocusNode _editFocus;
 
   final _focus = FocusNode();
-  final _editFocus = FocusNode();
   final _analyzer = JsonAnalyzer();
   final _undoRedo = UndoRedo();
 
@@ -140,6 +146,7 @@ class _JsonEditorState extends State<JsonEditor> {
   @override
   void initState() {
     _editController = widget.controller as RichTextEditingController;
+    _editFocus = widget.focusNode;
     if (widget.jsonString != null) {
       _editController.text = widget.jsonString!;
       if (!_analyzeSync()) {
@@ -366,7 +373,6 @@ class _JsonEditorState extends State<JsonEditor> {
   }
 
   Future<bool> _analyze() async {
-
     _editController.analyzeError = null;
     var hasError = false;
     //Wait for input complete
