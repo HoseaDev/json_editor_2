@@ -11,7 +11,7 @@
 
 ```yaml
 dependencies:
-    json_editor: ^0.0.8
+    json_editor_2: ^0.0.8
 ```
 
 ## Screen Shot
@@ -23,7 +23,7 @@ dependencies:
 ## Usage
 
 ```dart
-import 'package:json_editor/json_editor.dart';
+import 'package:json_editor_2/json_editor_2.dart';
 
 JsonEditor.string(
     jsonString: '''
@@ -43,7 +43,7 @@ JsonEditor.string(
 ```
 
 ```dart
-import 'package:json_editor/json_editor.dart';
+import 'package:json_editor_2/json_editor_2.dart';
 
 JsonEditor.object(
     object: const {
@@ -62,7 +62,7 @@ JsonEditor.object(
 `JsonElement` is a data model witch contains `key`, `value` and `comment`.
 
 ```dart
-import 'package:json_editor/json_editor.dart';
+import 'package:json_editor_2/json_editor_2.dart';
 
 JsonEditor.element(
     element: JsonElement(),

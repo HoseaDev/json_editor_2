@@ -1,4 +1,4 @@
-package com.example.json_editor_example
+package com.example.json_editor_2_example
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -4,19 +4,19 @@
 
 ## 0.0.7
 
-- fix: [使用 JsonEditor.object 时，当为负数时，格式校验不通过 · Issue #6 · youngchan1988/json_editor (github.com)](https://github.com/youngchan1988/json_editor/issues/6)
+- fix: [使用 JsonEditor.object 时，当为负数时，格式校验不通过 · Issue #6 · youngchan1988/json_editor_2 (github.com)](https://github.com/youngchan1988/json_editor_2/issues/6)
 
 ## 0.0.6
 
-- fix: [Logger, onValueChanged and comment issue · Issue #5 · youngchan1988/json_editor (github.com)](https://github.com/youngchan1988/json_editor/issues/5)
+- fix: [Logger, onValueChanged and comment issue · Issue #5 · youngchan1988/json_editor_2 (github.com)](https://github.com/youngchan1988/json_editor_2/issues/5)
 
 ## 0.0.5
 
-- fix: [(Feature Request) Add the support for khmer language · Issue #4 · youngchan1988/json_editor (github.com)](https://github.com/youngchan1988/json_editor/issues/4)
+- fix: [(Feature Request) Add the support for khmer language · Issue #4 · youngchan1988/json_editor_2 (github.com)](https://github.com/youngchan1988/json_editor_2/issues/4)
 
 ## 0.0.4
 
-- fix: [Embedded arrays parsing error · Issue #2 · youngchan1988/json_editor (github.com)](https://github.com/youngchan1988/json_editor/issues/2)
+- fix: [Embedded arrays parsing error · Issue #2 · youngchan1988/json_editor_2 (github.com)](https://github.com/youngchan1988/json_editor_2/issues/2)
 - Support Undo **(ctrl+z)**, Redo **(ctrl+shift+z)**
 
 ## 0.0.3
@@ -27,7 +27,7 @@
 
 - Add json data model to storage key, value and comment;
 - New api;
-- fix [Editor not updating · Issue #1 · youngchan1988/json_editor (github.com)](https://github.com/youngchan1988/json_editor/issues/1)
+- fix [Editor not updating · Issue #1 · youngchan1988/json_editor_2 (github.com)](https://github.com/youngchan1988/json_editor_2/issues/1)
 
 ## 0.0.1
 

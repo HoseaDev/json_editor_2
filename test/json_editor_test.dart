@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:json_editor/src/analyzer/analyzer.dart';
-import 'package:json_editor/src/analyzer/lexer/lexer.dart';
-import 'package:json_editor/src/analyzer/lexer/token.dart';
+import 'package:json_editor_2/src/analyzer/analyzer.dart';
+import 'package:json_editor_2/src/analyzer/lexer/lexer.dart';
+import 'package:json_editor_2/src/analyzer/lexer/token.dart';
 
 void main() {
   group('Lexer', () {

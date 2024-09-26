@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(runner LANGUAGES CXX)
 
-set(BINARY_NAME "json_editor_example")
-set(APPLICATION_ID "com.example.json_editor_example")
+set(BINARY_NAME "json_editor_2_example")
+set(APPLICATION_ID "com.example.json_editor_2_example")
 
 cmake_policy(SET CMP0063 NEW)
 

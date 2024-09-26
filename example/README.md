@@ -1,4 +1,4 @@
-# json_editor_example
+# json_editor_2_example
 
 A new Flutter project.
 

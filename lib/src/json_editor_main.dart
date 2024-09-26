@@ -1,4 +1,4 @@
-// Copyright (c) 2022, the json_editor project authors. Please see the AUTHORS file
+// Copyright (c) 2022, the json_editor_2 project authors. Please see the AUTHORS file
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
@@ -7,11 +7,12 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:json_editor/src/analyzer/analyzer.dart';
-import 'package:json_editor/src/json_editor_model.dart';
-import 'package:json_editor/src/util/logger.dart';
-import 'package:json_editor/src/util/undo_redo.dart';
+import 'package:json_editor_2/src/analyzer/analyzer.dart';
+import 'package:json_editor_2/src/json_editor_model.dart';
+import 'package:json_editor_2/src/util/logger.dart';
+import 'package:json_editor_2/src/util/undo_redo.dart';
 
+import 'json_editor_model.dart';
 import 'rich_text_field/rich_text_editing_controller.dart';
 import 'util/string_util.dart';
 

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(json_editor_example LANGUAGES CXX)
+project(json_editor_2_example LANGUAGES CXX)
 
-set(BINARY_NAME "json_editor_example")
+set(BINARY_NAME "json_editor_2_example")
 
 cmake_policy(SET CMP0063 NEW)
 

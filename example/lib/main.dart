@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:json_editor/json_editor.dart';
+import 'package:json_editor_2/json_editor.dart';
 
 void main() {
   runApp(const MyApp());

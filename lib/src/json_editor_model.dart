@@ -1,10 +1,10 @@
-// Copyright (c) 2022, the json_editor project authors. Please see the AUTHORS file
+// Copyright (c) 2022, the json_editor_2 project authors. Please see the AUTHORS file
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
 import 'dart:convert';
-import 'package:json_editor/src/analyzer/analyzer.dart';
-import 'package:json_editor/src/util/num_util.dart';
+import 'package:json_editor_2/src/analyzer/analyzer.dart';
+import 'package:json_editor_2/src/util/num_util.dart';
 
 import 'analyzer/lexer/lexer.dart';
 import 'analyzer/lexer/token.dart';
