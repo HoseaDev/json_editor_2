@@ -25,7 +25,7 @@ class JsonEditor extends StatefulWidget {
       this.openDebug = false,
       this.onValueChanged,
       required this.controller,
-        required this.focusNode})
+      required this.focusNode})
       : assert(jsonObj == null || jsonObj is Map || jsonObj is List),
         super(key: key) {
     initialLogger(openDebug: openDebug);
@@ -37,7 +37,7 @@ class JsonEditor extends StatefulWidget {
           bool enabled = true,
           bool openDebug = false,
           TextEditingController? controller,
-            FocusNode? focusNode,
+          FocusNode? focusNode,
           ValueChanged<JsonElement>? onValueChanged}) =>
       JsonEditor._(
         key: key,
@@ -55,7 +55,7 @@ class JsonEditor extends StatefulWidget {
           bool enabled = true,
           bool openDebug = false,
           TextEditingController? controller,
-            FocusNode? focusNode,
+          FocusNode? focusNode,
           ValueChanged<JsonElement>? onValueChanged}) =>
       JsonEditor._(
         key: key,
@@ -73,7 +73,7 @@ class JsonEditor extends StatefulWidget {
           bool enabled = true,
           bool openDebug = false,
           TextEditingController? controller,
-            FocusNode? focusNode,
+          FocusNode? focusNode,
           ValueChanged<JsonElement>? onValueChanged}) =>
       JsonEditor._(
         key: key,
@@ -126,10 +126,10 @@ class JsonEditor extends StatefulWidget {
   }
 
   @override
-  _JsonEditorState createState() => _JsonEditorState();
+  JsonEditorState createState() => JsonEditorState();
 }
 
-class _JsonEditorState extends State<JsonEditor> {
+class JsonEditorState extends State<JsonEditor> {
   late RichTextEditingController _editController;
   late FocusNode _editFocus;
 
@@ -408,5 +408,10 @@ class _JsonEditorState extends State<JsonEditor> {
         }
       });
     }
+  }
+
+  void doAnalyze() {
+    _lastInput = DateTime.now();
+    _analyze();
   }
 }

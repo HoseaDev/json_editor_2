@@ -43,6 +43,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   bool _darkMode = false;
   JsonElement? _elementResult;
+  final GlobalKey<JsonEditorState> _jsonEditorKey = GlobalKey<JsonEditorState>();
 
   @override
   Widget build(BuildContext context) {
